@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.IO;
+using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
@@ -11,8 +7,8 @@ namespace API.Controllers
     {
         public ActionResult Index()
         {
-            return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
+            return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(), 
                 "wwwroot", "index.html"), "text/HTML");
         }
     }
-}
+} 
