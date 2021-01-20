@@ -15,12 +15,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 namespace API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class UsersController : BaseApiController
     {
         private readonly IMapper _mapper;
         private readonly IPhotoService _photoService;
         private readonly IUnitOfWork _unitOfWork;
+
         public UsersController(IUnitOfWork unitOfWork, IMapper mapper, IPhotoService photoService)
         {
             _photoService = photoService;
