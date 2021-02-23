@@ -21,6 +21,7 @@ namespace API.Extensions
                 opt.Password.RequireUppercase = false;
                 opt.Password.RequireDigit = false;
                 opt.Password.RequireLowercase = false;
+                opt.Password.RequiredLength = 4;
             })
                 .AddRoles<AppRole>()
                 .AddRoleManager<RoleManager<AppRole>>()
