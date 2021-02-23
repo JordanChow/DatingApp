@@ -10,24 +10,23 @@ using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+
 namespace API.Controllers
 {
     public class AccountController : BaseApiController
     {
-
-        private readonly UserManager<AppUser> _userManager;
-        private readonly SignInManager<AppUser> _signInManager;
         private readonly ITokenService _tokenService;
         private readonly IMapper _mapper;
-
+        private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
         public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenService tokenService, IMapper mapper)
         {
-            _mapper = mapper;
-            _userManager = userManager;
             _signInManager = signInManager;
+            _userManager = userManager;
+            _mapper = mapper;
             _tokenService = tokenService;
-            
         }
+
         [HttpPost("register")]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
@@ -67,7 +66,7 @@ namespace API.Controllers
                 .CheckPasswordSignInAsync(user, loginDto.Password, false);
 
             if (!result.Succeeded) return Unauthorized();
-            
+
             return new UserDto
             {
                 Username = user.UserName,
