@@ -29,3 +29,4 @@ Backend
 
 Frontend
 - Angular (HTML/CSS/Typescript)
+- Bootstrap
