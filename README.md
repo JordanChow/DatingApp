@@ -15,7 +15,7 @@ upload photos in their personal gallery.
 - Angular template forms and reactive forms with validation
 - Paging, sorting, filtering functionality
 - Message system, allowing real time messages and notification system between users
-- Presense system, displaying online users
+- Presence system, displaying online users
 - Identity and role management, implementing authorization requirements
 
 **Technologies used**<br/>
@@ -29,4 +29,5 @@ Backend
 
 Frontend
 - Angular (HTML/CSS/Typescript)
+- Angular CLI
 - Bootstrap
